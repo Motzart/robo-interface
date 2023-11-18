@@ -4,7 +4,7 @@ import NavItem from './NavItem';
 
 const Nav = () => {
   return (
-    <nav className="py-[24px] pl-[10px] bg-white border-2 border-t-0 border-[#F4F6F9]">
+    <nav className="py-[24px] pl-[10px] bg-white border-2 border-t-0 border-lightGray">
       <ul className="flex flex-col gap-[12px]">
         {data.map((item) => (
           <li key={item.key}>
