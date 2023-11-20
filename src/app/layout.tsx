@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} grid grid-cols-[100px_1fr] grid-rows-[max-content_1fr] w-screen h-screen`}
+        className={`${inter.className} grid grid-cols-[100px_1fr] grid-rows-[max-content_1fr] w-screen h-[100dvh] sm:grid-cols-1 sm:grid-rows-[max-content_1fr_max-content]`}
       >
         <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
           <Header />

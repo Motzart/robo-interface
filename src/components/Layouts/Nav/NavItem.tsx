@@ -37,7 +37,9 @@ const NavItem = ({ data }: { data: TypeNavItem }) => {
       <NextLink
         href={href}
         className={`${sharedStyles} ${
-          isActive ? 'rounded-[16px] bg-lightBlue text-blue' : ''
+          isActive
+            ? 'rounded-[16px] bg-lightBlue !text-blue sm:bg-transparent'
+            : ''
         }`}
       >
         {sharedComponent}
