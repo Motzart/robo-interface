@@ -9,6 +9,7 @@ import Nav from '@/components/Layouts/Nav';
 import config from '@/config';
 import '@/assets/css/globals.css';
 import Main from '@/components/Layouts/Main';
+import { ReduxProvider } from '@/store/provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,11 +25,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} grid grid-cols-[100px_1fr] grid-rows-[max-content_1fr] w-screen h-[100dvh] sm:grid-cols-1 sm:grid-rows-[max-content_1fr_max-content]`}
       >
-        <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-          <Header />
-          <Nav />
-          <Main>{children}</Main>
-        </GoogleOAuthProvider>
+        <ReduxProvider>
+          <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+            <Header />
+            <Nav />
+            <Main>{children}</Main>
+          </GoogleOAuthProvider>
+        </ReduxProvider>
       </body>
     </html>
   );

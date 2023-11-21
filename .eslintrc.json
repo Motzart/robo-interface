@@ -13,5 +13,5 @@
     "browser": true,
     "node": true
   },
-  "ignorePatterns": ["dist", "node_modules", "**/*.test.js"]
+  "ignorePatterns": ["dist", "node_modules", "**/*.test.js", "tailwind.config.ts"]
 }
